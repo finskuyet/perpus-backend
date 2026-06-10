@@ -15,8 +15,8 @@ const JWT_SECRET = process.env.JWT_SECRET || 'rahasia_jwt_default';
 
 // ===================== MIDDLEWARE =====================
 app.use(cors({
-    origin: process.env.FRONTEND_URL || '*',
-    credentials: true
+    origin: '*',
+    credentials: false
 }));
 app.use(express.json({ limit: '20mb' }));
 
